@@ -54,12 +54,18 @@
                         
 
                          <div class="input-group">
-                            <input class="input--style-1" type="text" placeholder="Employee ID" name="eid" required="required">
+                            <select class="input--style-1" name="eid" required>
+  <option value="">Select Employee ID</option>
+  <?php
+    require_once ('process/dbh.php');
+    $result = mysqli_query($conn, "SELECT id FROM employee");
+    while ($row = mysqli_fetch_assoc($result)) {
+      echo "<option value='{$row['id']}'>{$row['id']}</option>";
+    }
+  ?>
+</select>
+
                         </div>
-
-
-
-
 
                         <div class="input-group">
                             <input class="input--style-1" type="text" placeholder="Project Name" name="pname" required="required">

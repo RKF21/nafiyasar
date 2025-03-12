@@ -146,11 +146,7 @@ $result = mysqli_query($conn, $sql);
                         </div>
 
 
-                        <div class="input-group">
-                          <p>Total Salary</p>
-                            <input class="input--style-1" type="text" name="degree" value="<?php echo $empS;?>" readonly>
-                        </div>
-
+                       
                         <input type="hidden" name="id" id="textField" value="<?php echo $id;?>" required="required"><br><br>
                         <div class="p-t-20">
                             <button class="btn btn--radius btn--green"  name="send" >Update Info</button>
